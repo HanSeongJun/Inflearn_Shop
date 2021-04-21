@@ -10,10 +10,18 @@ function UploadProductPage() {
     const [Price, setPrice] = useState(0)
     const [Continent, setContinent] = useState(1)
     const [Images, setImages] = useState([]) // array
-    
+
 
     const titleChangeHandler = (event) => {
         setTitle(event.currentTarget.value) 
+    }
+
+    const descriptionChangeHandler = (event) => {
+        setDescription(event.currentTarget.value)
+    }
+
+    const priceChangeHandler = (event) => {
+        setPrice(event.currentTarget.value)
     }
 
     return (
@@ -27,15 +35,15 @@ function UploadProductPage() {
                 <br />
                 <br />
                 <label>이름</label>
-                <Input onChange = {titleChangeHandler} value = {Title} />
+                <Input onChange = { titleChangeHandler } value = { Title } />
                 <br />
                 <br />
                 <label>설명</label>
-                <TextArea />
+                <TextArea onChange = { descriptionChangeHandler } value = { Description }/>
                 <br />
                 <br />
                 <label>가격($)</label>
-                <Input/>
+                <Input type = "number" onChange = { priceChangeHandler } value = { Price }/>
                 <br />
                 <br />
                 <select>
