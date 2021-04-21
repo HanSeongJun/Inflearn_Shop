@@ -46,6 +46,11 @@ function UploadProductPage() {
  
             <Form>
                 { /* DropZone */}
+                <FileUpload /> 
+
+
+
+
                 <br />
                 <br />
                 <label>이름</label>
