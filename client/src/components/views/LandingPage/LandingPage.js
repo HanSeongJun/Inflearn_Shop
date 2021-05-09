@@ -63,7 +63,7 @@ function LandingPage() {
       </Col>
     );
   });
-
+  const handleFilters = () => {};
   return (
     <div style={{ width: "75%", margin: "3rem auto" }}>
       <div style={{ textAlign: "center" }}>
@@ -74,7 +74,10 @@ function LandingPage() {
 
       {/* Filter */}
       {/* CheckBox */}
-      <CheckBox list={continents} />
+      <CheckBox
+        list={continents}
+        handleFilters={(filter) => handleFilters(filters, "continents")}
+      />
       {/* Search */}
       {/* Cards */}
 
