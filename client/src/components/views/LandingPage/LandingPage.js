@@ -4,6 +4,8 @@ import axios from "axios";
 import { Icon, Col, Card, Row, Carousel } from "antd";
 import Meta from "antd/lib/card/Meta";
 import ImageSlider from "../../utils/ImageSlider";
+import CheckBox from "./Sections/CheckBox";
+import { continents } from "./Sections/Datas";
 
 function LandingPage() {
   const [Products, setProducts] = useState([]); // 여러가지 상품들을 넣어주기 위해 array로
@@ -71,6 +73,8 @@ function LandingPage() {
       </div>
 
       {/* Filter */}
+      {/* CheckBox */}
+      <CheckBox list={continents} />
       {/* Search */}
       {/* Cards */}
 
